@@ -10,7 +10,6 @@ services:
       - MYSQL_ROOT_PASSWORD=rootpassword
   apache:
     build: .
-    hostname: ServerApache
     volumes:
       - ./public_html/:/var/www/html/
     ports:
