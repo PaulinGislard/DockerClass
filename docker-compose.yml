@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mysql:
-    container_name: php-apache
+    container_name: mysql
     build: ./docker/mysql
     ports:
       - "3306:3306"
