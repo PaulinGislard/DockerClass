@@ -1,8 +1,13 @@
-<h1>Hello Cloudreach!</h1>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> index </title>
+    </head>
+    <body><h1>Hello Cloudreach!</h1>
 <h4>Attempting MySQL connection from php...</h4>
 <body>
 <?php
-prinf("coucou");
+printf("coucou");
 $host = 'mysql';
 $user = 'root';
 $pass = 'password';
