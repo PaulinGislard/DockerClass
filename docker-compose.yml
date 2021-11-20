@@ -10,19 +10,13 @@ services:
       - MYSQL_ROOT_PASSWORD=rootpassword
     volumes:
       - .:/app
-    networks:
-      - backend
   apache:
     build: ./docker/apache
     volumes:
       - ./public_html/:/var/www/localhost/htdocs/
     ports:
       - "8080:80"
-    networks:
-      - backend
   php:
     build: ./docker/php
     volumes:
       - ./public_html/:/var/www/html/
-networks:
-      - backend
