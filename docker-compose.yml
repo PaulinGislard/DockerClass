@@ -7,12 +7,12 @@ services:
     ports:
       - "3306:3306"
     environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: msql
+            MYSQL_ROOT_PWD: 123
             MYSQL_USER: network
-            MYSQL_PASSWORD: root
+            MYSQL_USER_PWD: network
+            MYSQL_USER_DB: mysql
     volumes:
-      - .:/app
+      - /mysql/data/:/var/lib/mysql
   apache:
     build: ./docker/apache
     volumes:
