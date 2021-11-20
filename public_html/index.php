@@ -28,8 +28,8 @@ if ($conn->connect_error) {
 ?>
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "mysql";
+$username = "network";
+$password = "network";
 
 try {
     $conn = new PDO("mysql:host=$servername;port=3306;dbname=mysql", $username, $password); 
