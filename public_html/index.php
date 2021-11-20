@@ -7,15 +7,23 @@
 <h4>Attempting MySQL connection from php...</h4>
 <body>
 <?php
-printf("coucou");
-$host = 'mysql';
+//These are the defined authentication environment in the db service
+
+// The MySQL service named in the docker-compose.yml.
+$host = 'db';
+
+// Database use name
 $user = 'root';
+
+//database user password
 $pass = 'password';
-$connexion = new mysqli($host, $user, $pass);
-if ($connexion->connect_errno) {
-    printf("´Echec de la connexion : %s %s",
-        $connexion->connect_errno, $connexion->connect_error);
-    exit();}
-printf("coucou");
+
+// check the MySQL connection status
+$conn = new mysqli($host, $user, $pass);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "Connected to MySQL server successfully!";
+}
 ?>
 </body>
