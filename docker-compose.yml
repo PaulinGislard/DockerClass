@@ -9,7 +9,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
   apache:
-    build: ./docker/apache
+    build: .
     hostname: ServerApache
     volumes:
       - ./public_html/:/var/www/html/
