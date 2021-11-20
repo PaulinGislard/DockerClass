@@ -5,7 +5,7 @@ $host = 'mysql';
 $user = 'root';
 $pass = 'password';
 $connexion = new mysqli($host, $user, $pass);
-
+echo "cool"
 if ($connexion->connect_errno) {
     printf("´Echec de la connexion : %s %s",
         $connexion->connect_errno, $connexion->connect_error);
