@@ -22,7 +22,7 @@ services:
     depends_on:
       - mysql
 phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin
     ports:
         - '8090:80'
     restart: always
