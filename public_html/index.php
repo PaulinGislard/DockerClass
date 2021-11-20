@@ -10,7 +10,7 @@
 //These are the defined authentication environment in the db service
 
 // The MySQL service named in the docker-compose.yml.
-$host = 'db';
+$host = 'mysql';
 
 // Database use name
 $user = 'network';
@@ -32,7 +32,7 @@ $username = "network";
 $password = "root";
 
 try {
-    $conn = new PDO("mysql:host=$servername;port=3306;dbname=AppDatabase", $username, $password); 
+    $conn = new PDO("mysql:host=$servername;port=3306;s", $username, $password); 
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully"; 
