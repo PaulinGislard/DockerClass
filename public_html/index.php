@@ -1,5 +1,6 @@
 <h1>Hello Cloudreach!</h1>
 <h4>Attempting MySQL connection from php...</h4>
+<body>
 <?php
 prinf("coucou")
 $host = 'mysql';
@@ -13,3 +14,4 @@ if ($connexion->connect_errno) {
     exit();}
 echo "cool";
 ?>
+</body>
