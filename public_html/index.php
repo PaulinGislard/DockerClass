@@ -1,10 +1,9 @@
 <h1>Hello Cloudreach!</h1>
 <h4>Attempting MySQL connection from php...</h4>
 <?php
-phpinfo();
 $host = 'localhost';
-$user = 'gpi2';
-$pass = 'network';
+$user = 'root';
+$pass = 'password';
 $connexion = new mysqli($host, $user, $pass);
 
 if ($connexion->connect_errno) {
