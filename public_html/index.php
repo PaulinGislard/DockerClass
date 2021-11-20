@@ -5,13 +5,11 @@ phpinfo();
 $host = 'localhost';
 $user = 'gpi2';
 $pass = 'network';
-$conn = new mysqli($host, $user, $pass);
+$connexion = new mysqli($host, $user, $pass);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    echo "shit";
-}
-else{
-    echo "cool";
-} 
+if ($connexion->connect_errno) {
+    printf("´Echec de la connexion : %s %s",
+        $connexion->connect_errno, $connexion->connect_error);
+    exit();}
+echo "cool";
 ?>
