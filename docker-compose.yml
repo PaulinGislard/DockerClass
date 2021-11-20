@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  mysql:
+    build: ./docker/mysql
+    hostname: httpd
+    networks:
+      - backend
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+  Apache:
+    build: ./docker/apache
+    hostname: ServerApache
+    depends_on:
+      - mysql
+      - php
+    networks:
+      - frontend
+      - backend
+    volumes:
+      - ./public_html/:/var/www/html/
+    ports:
+      - "80:80"
+  php:
+    build: ./docker/php
+    networks:
+      - frontend
+    volumes:
+      - ./public_html/:/var/www/html/
+networks:
+  frontend:
+  backend:
