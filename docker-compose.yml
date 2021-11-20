@@ -3,13 +3,12 @@ version: '3'
 services:
   mysql:
     build: ./docker/mysql
-    hostname: httpd
     ports:
       - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
   apache:
-    build: .
+    build: ./docker/apache
     volumes:
       - ./public_html/:/var/www/html/
     ports:
