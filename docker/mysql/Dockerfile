@@ -14,7 +14,7 @@ RUN apk update && \
 	mkdir /scripts && \
 	rm -rf /var/cache/apk/*
 
-COPY ./startup.sh /scripts/startup.sh
+COPY ./mysql/db_file/startup.sh /scripts/startup.sh
 RUN chmod +x /scripts/startup.sh
 
 ENTRYPOINT ["/scripts/startup.sh"]
