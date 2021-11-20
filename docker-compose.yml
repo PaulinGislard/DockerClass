@@ -10,7 +10,7 @@ services:
   apache:
     build: ./docker/apache
     volumes:
-      - ./public_html/:/var/www/html/
+      - ./public_html/:/var/www/localhost/htdocs
     ports:
       - "8080:80"
   php:
