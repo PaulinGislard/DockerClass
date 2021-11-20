@@ -2,7 +2,7 @@
 <h4>Attempting MySQL connection from php...</h4>
 <body>
 <?php
-prinf("coucou")
+prinf("coucou");
 $host = 'mysql';
 $user = 'root';
 $pass = 'password';
