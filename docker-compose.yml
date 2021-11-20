@@ -16,6 +16,8 @@ services:
       - ./public_html/:/var/www/localhost/htdocs/
     ports:
       - "8080:80"
+    depends_on:
+      - db
   php:
     build: ./docker/php
     volumes:
