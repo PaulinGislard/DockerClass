@@ -17,6 +17,6 @@ if ($connexion->connect_errno) {
     printf("´Echec de la connexion : %s %s",
         $connexion->connect_errno, $connexion->connect_error);
     exit();}
-echo "cool";
+printf("coucou");
 ?>
 </body>
