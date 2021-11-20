@@ -13,10 +13,10 @@
 $host = 'db';
 
 // Database use name
-$user = 'root';
+$user = 'network';
 
 //database user password
-$pass = 'password';
+$pass = 'root';
 
 // check the MySQL connection status
 $conn = new mysqli($host, $user, $pass);
