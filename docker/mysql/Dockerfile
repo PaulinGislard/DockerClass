@@ -12,5 +12,5 @@ ADD ./db_file/ID.sql /scripts/ID.sql
 RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/my.cnf
 EXPOSE 3306:3306
 VOLUME [ "/var/lib/mysql" ]
-ENTRYPOINT ["/scripts/startup.sh", "/usr/bin/mysql -u root -p mysql < /scripts/ID.sq"]
+ENTRYPOINT ["/scripts/startup.sh"]
 
