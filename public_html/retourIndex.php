@@ -34,6 +34,7 @@
         $numeroUtilisateur = $resultat["ID"];
         if($numeroUtilisateur==1){
             echo "<a href='menuAdministrateur.php'>cliquez ici</a><br>";
+            echo"bf";
         }else{
             echo "<a href='listeConcours.php'>cliquez ici</a><br>";
         }
