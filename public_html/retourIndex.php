@@ -23,7 +23,7 @@
 			$connexion->connect_errno, $connexion->connect_error);
 		exit();}
 	$connexion->set_charset("utf8");
-	$maRequete = "SELECT User, PWD FROM ID WHERE login LIKE '$login' AND motDePasse LIKE '$motDePasse';" ;
+	$maRequete = "SELECT User, PWD, ID FROM ID WHERE User LIKE '$login' AND PWD LIKE '$motDePasse';" ;
 	$result = $connexion->query($maRequete);
 	if(!$result) {
 		echo "la requete ne s’est pas exécutée";} 
