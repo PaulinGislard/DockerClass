@@ -23,7 +23,7 @@
 			$connexion->connect_errno, $connexion->connect_error);
 		exit();}
 	$connexion->set_charset("utf8");
-	$maRequete = "SELECT User, PWD, ID FROM ID WHERE User LIKE '$login' AND PWD LIKE '$motDePasse';" ;
+	$maRequete = "SELECT User, PWD, ID, Prenom FROM ID WHERE User LIKE '$login' AND PWD LIKE '$motDePasse';" ;
 	$result = $connexion->query($maRequete);
 	if(!$result) {
 		echo "la requete ne s’est pas exécutée";} 
@@ -50,6 +50,7 @@
 <br>
 Identifiant: <?php echo $login; ?><br>
 Mot de passe: <?php echo $motDePasse; ?><br>
+ID:<?php echo $numeroUtilisateur; ?><br>
 Requete:  <?php echo $maRequete;?><br>
     </body>
 </html>
