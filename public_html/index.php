@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 }*/
 ?>
 <?php
-$servername = "mysql";
+$servername = "localhost";
 $username = "root";
 $password = "mysql";
 
