@@ -28,16 +28,12 @@
 	if(!$result) {
 		echo "la requete ne s’est pas exécutée";} 
 	else {
-        echo "la requete s’est bien passée";
+        echo "la requete s’est bien passée <br>";
        
         $resultat = $result->fetch_assoc(); // ...
         $numeroUtilisateur = $resultat["ID"];
-        if($numeroUtilisateur==1){
-            echo "<a href='menuAdministrateur.php'>cliquez ici</a><br>";
-            echo"bf";
-        }else{
-            echo "<a href='listeConcours.php'>cliquez ici</a><br>";
-        }
+        $prenom=$resultat["Prenom"];
+        echo "Bonjour $prenom et bienvenu<br>";
         session_start();
         $_SESSION['utilisateur']=$numeroUtilisateur;
 		$result->free();}
