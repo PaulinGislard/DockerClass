@@ -70,7 +70,7 @@ EOF
 	    fi
 	fi
 
-	/usr/bin/mysqld --user=mysql --bootstrap --verbose=0 --skip-name-resolve --skip-networking=0 < ID.sql
+	/usr/bin/mysqld --user=mysql --bootstrap --verbose=0 --skip-name-resolve --skip-networking=0 < $tfilec
 	rm -f $tfile
 l
 	for f in /docker-entrypoint-initdb.d/*; do
