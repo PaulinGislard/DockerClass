@@ -5,8 +5,8 @@
     </head>
     <body>
         <?php 
-        $login= $_POST['root'];
-        $motDePasse=$_POST['hello'];
+        $login= $_POST['login'];
+        $motDePasse=$_POST['motDePasse'];
 
         $host = 'mysql';
 
@@ -51,6 +51,5 @@
 Identifiant: <?php echo $login; ?><br>
 Mot de passe: <?php echo $motDePasse; ?><br>
 Requete:  <?php echo $maRequete;?><br>
-numero: <?php echo $numeroUtilisateur;?>
     </body>
-</html>e
+</html>
