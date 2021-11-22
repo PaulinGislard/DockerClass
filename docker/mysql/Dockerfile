@@ -1,8 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && \
-	apk add mysql mysql-client && \
-	addgroup mysql mysql && \
+	apk add mariadb mariadb-client mariadb-server-utils && \
 	mkdir /scripts && \
 	rm -rf /var/cache/apk/*
 
