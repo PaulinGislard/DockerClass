@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TAKEN FROM : https://github.com/yobasystems/alpine-mariadb/blob/master/alpine-mariadb-amd64/files/run.sh?fbclid=IwAR0K8eEgSV5RCQOax_TnYzRotc2eKyfpsHwh45FHkj9Z-bNHY_FbD72e1Jk
+
 # execute any pre-init scripts
 for i in /scripts/pre-init.d/*sh
 do
