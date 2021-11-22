@@ -31,7 +31,7 @@
         echo "la requete s’est bien passée";
        
         $resultat = $result->fetch_assoc(); // ...
-        $numeroUtilisateur = $resultat["numUtilisateur"];
+        $numeroUtilisateur = $resultat["ID"];
         if($numeroUtilisateur==1){
             echo "<a href='menuAdministrateur.php'>cliquez ici</a><br>";
         }else{
