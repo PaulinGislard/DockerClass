@@ -12,8 +12,6 @@ services:
             MYSQL_USER: network
             MYSQL_USER_PWD: network
             MYSQL_USER_DB: mysql
-    volumes:
-      - /mysql/data/:/var/lib/mysql
   apache:
     build: ./docker/apache
     volumes:
