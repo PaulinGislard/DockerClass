@@ -2,9 +2,9 @@
 
 # parameters
 MYSQL_ROOT_PWD=${MYSQL_ROOT_PWD:-"mysql"}
-MYSQL_USER=${MYSQL_USER:-""}
-MYSQL_USER_PWD=${MYSQL_USER_PWD:-""}
-MYSQL_USER_DB=${MYSQL_USER_DB:-""}
+MYSQL_USER=${MYSQL_USER:-"net"}
+MYSQL_USER_PWD=${MYSQL_USER_PWD:-"net"}
+MYSQL_USER_DB=${MYSQL_USER_DB:-"net"}
 
 if [ ! -d "/run/mysqld" ]; then
 	mkdir -p /run/mysqld
