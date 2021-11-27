@@ -9,7 +9,7 @@ services:
     environment:
             MYSQL_ROOT_PASSWORD: hello
     networks:
-      - Intern
+      - networkName
   apache:
     build: ./docker/apache
     volumes:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - mysql
     networks:
-      - Intern
+      - networkName
   phpmyadmin:
       image: phpmyadmin:5.1-apache
       container_name: phpmyadmin
@@ -34,7 +34,7 @@ services:
       links: 
       - "mysql"
       networks:
-      - Intern
+      - networkName
 networks:
   networkName:
-    name: Intern
+    name: networkName
