@@ -36,5 +36,5 @@ services:
       networks:
       - Intern
 networks:
-  networkName:
+  Intern:
     name: Intern
