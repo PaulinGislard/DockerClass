@@ -8,6 +8,8 @@ services:
       - "3306:3306"
     environment:
             MYSQL_ROOT_PASSWORD: hello
+    volumes:
+      - /home/paulin/Documents/db:/var/lib/mysql
     networks:
       - Intern
   apache:
